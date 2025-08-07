@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mess Rating Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Welcome to College Mess</h1>
+
+    <div class="save-food-banner">Save Food, Respect Food</div>
+
+    <div class="slideshow-container">
+      <img class="food-slide active" src="food1.jpg" alt="Food Image 1">
+      <img class="food-slide" src="food2.jpg" alt="Food Image 2">
+      <img class="food-slide" src="food3.jpg" alt="Food Image 3">
+    </div>
+
+    <div class="mess-box">
+      <h2>Today's Menu</h2>
+      <table>
+        <tr>
+          <th>Day</th>
+          <th>Breakfast</th>
+          <th>Lunch</th>
+          <th>Snacks</th>
+          <th>Dinner</th>
+        </tr>
+        <tr>
+          <td>Monday</td>
+          <td>Poha</td>
+          <td>Rajma Rice</td>
+          <td>Samosa</td>
+          <td>Paneer + Roti</td>
+        </tr>
+        <!-- Add more rows as needed -->
+      </table>
+
+      <h3>Rate Today's Food</h3>
+      <div class="rating">
+        <input type="radio" name="rate" value="1"> 1
+        <input type="radio" name="rate" value="2"> 2
+        <input type="radio" name="rate" value="3"> 3
+        <input type="radio" name="rate" value="4"> 4
+        <input type="radio" name="rate" value="5"> 5
+      </div>
+
+      <button>Submit Rating</button>
+
+      <div class="mess-charge">
+        <h3>Mess Charges</h3>
+        <p>Total Monthly Charge: ₹2500</p>
+        <p>Last Payment: ₹2500 on 1st August 2025</p>
+      </div>
+
+      <h3>Mess Rules</h3>
+      <ul>
+        <li>No food wastage.</li>
+        <li>Be on time.</li>
+        <li>Respect the mess staff.</li>
+      </ul>
+
+      <img class="qr-img" src="qr.png" alt="QR Code for Payment" width="150">
+    </div>
+
+    <div id="decision-box">
+      <p>Thank you for your feedback!</p>
+    </div>
+  </div>
+
+  <!-- Optional: JS for image slideshow -->
+  <script>
+    const slides = document.querySelectorAll('.food-slide');
+    let index = 0;
+    setInterval(() => {
+      slides[index].classList.remove('active');
+      index = (index + 1) % slides.length;
+      slides[index].classList.add('active');
+    }, 3000);
+  </script>
+</body>
+</html>
